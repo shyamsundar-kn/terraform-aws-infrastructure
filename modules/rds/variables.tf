@@ -1,13 +1,30 @@
-variable "vpc_id" {}
+variable "vpc_id" {
+  description = "VPC ID where RDS will be deployed"
+  type        = string
+}
 
-variable "private_subnet_1_id" {}
+variable "private_subnet_1_id" {
+  description = "Private subnet 1 ID"
+  type        = string
+}
 
-variable "private_subnet_2_id" {}
+variable "private_subnet_2_id" {
+  description = "Private subnet 2 ID"
+  type        = string
+}
 
-variable "private_sg_id" {}
+variable "private_sg_id" {
+  description = "Private EC2 Security Group ID"
+  type        = string
+}
 
-variable "db_username" {}
+variable "db_username" {
+  description = "RDS master username"
+  type        = string
+}
 
 variable "db_password" {
-  sensitive = true
+  description = "RDS master password"
+  type        = string
+  sensitive   = true
 }
